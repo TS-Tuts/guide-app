@@ -6,4 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <yaga-map style="height: 100%" [lat]="51" [lng]="7" [zoom]="10">
+    <yaga-tile-layer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></yaga-tile-layer>
+  </yaga-map>
+</ion-content>
