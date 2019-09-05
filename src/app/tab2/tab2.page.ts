@@ -15,24 +15,31 @@ import {ConfigurationService} from '../configuration.service';
 export class Tab2Page {
     public dict: Record<string, Record<string, string>> = {
         de: {
-          pageTitle: 'Karte',
-
+            pageTitle: 'Karte',
+            address: 'Anschrift',
+            website: 'Webseite',
+            contact: 'Kontakt',
+            phone: 'Telefon',
+            openinghours: 'Öffnungszeiten'
 
         },
         en: {
-          pageTitle: 'Map',
-
+            pageTitle: 'Map',
+            address: 'Address',
+            website: 'Website',
+            contact: 'Contact',
+            phone: 'Telephone',
+            openinghours: 'Opening Hours'
 
         },
     };
-
 
   @ViewChild(MapComponent, {static: true}) private mapComponent: MapComponent;
   private geoJSONMap: Map<string, Promise<FeatureCollection<LineString | Polygon | Point>>> = new Map();
   public data = dataModel;
   constructor(
-      public configurationService: ConfigurationService,
       private http: HttpClient,
+      public configurationService: ConfigurationService,
   ) {}
 
   public getFeatureCollection(path: string): Promise<FeatureCollection<LineString | Polygon | Point>> {
