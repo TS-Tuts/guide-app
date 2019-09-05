@@ -4,6 +4,7 @@ import {FeatureCollection, LineString, Point, Polygon} from 'geojson';
 
 import { dataModel } from './tab2.simple-model';
 import {HttpClient} from '@angular/common/http';
+import { i18n } from '../i18n';
 
 @Component({
   selector: 'app-tab2',
@@ -11,6 +12,12 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+    public dict: Record<string, Record<string, string>> = {
+        de: {},
+        en: {},
+    };
+
+    public lang = 'en';
 
   @ViewChild(MapComponent, {static: true}) private mapComponent: MapComponent;
   private geoJSONMap: Map<string, Promise<FeatureCollection<LineString | Polygon | Point>>> = new Map();
@@ -32,4 +39,8 @@ export class Tab2Page {
   public ionViewWillEnter() {
     this.mapComponent.invalidateSize();
   }
+
+    public i18n(key, fallback = '') {
+        return i18n(this.dict)(this.lang, key, fallback);
+    }
 }
