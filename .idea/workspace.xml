@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e3cd4b3-aa9e-4f0c-a68c-27297e5f63d6" name="Default Changelist" comment="Automate steps in IDE part2">
-      <change afterPath="$PROJECT_DIR$/src/app/i18n.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/geojson/tracks_Rhine.geojson" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tab1/tab1.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab1/tab1.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tab1/tab1.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab1/tab1.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab2/tab2.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab2/tab2.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab2/tab2.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tab3/tab3.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab3/tab3.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tab3/tab3.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab3/tab3.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tab2/tab2.simple-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tab2/tab2.simple-model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/geojson/line.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/geojson/line.geojson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/geojson/route1.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/geojson/route1.geojson" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +40,9 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dokumente\GTD\Projekte\WebstormProjects\guide-app\src\assets\geojson" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/app/tab2" />
@@ -146,7 +151,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
