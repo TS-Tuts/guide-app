@@ -15,7 +15,7 @@ export class Tab1Page {
   public dict: Record<string, Record<string, string>> = {
     de: {
       pageTitle: 'Dein Führer',
-      pageMorning:'Guten Morgen, ich bin heute dein Führer',
+      pageMorning: 'Guten Morgen, ich bin heute dein Führer',
       pageAfternoon: 'Guten Tag, ich bin heute dein Führer',
       pageEvening: 'Guten Abend, ich bin heute dein Führer',
       pageSubtitle: 'Noch keinen Plan für heute Abend? Dann machen wir uns jetzt einen!',
