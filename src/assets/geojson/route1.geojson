@@ -4,7 +4,7 @@
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": {
-  "category": "long",
+  "category": "medium",
   "name": "Route 1",
   "de_title": "Vom Friedensplatz zur Altstadt",
   "en_title": "The old town of Bonn",
