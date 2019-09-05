@@ -14,12 +14,23 @@ export class Tab3Page {
     pageLang: 'Sprache',
     pageDe: 'Deutsch',
     pageEng: 'Englisch',
+    subtitle: 'Geographisches Institut der Universität Bonn',
+    studentProject: 'Studentisches Projekt',
+    GeoApp: 'Dies ist ein Projekt vom Geo-App Kurs des Geographischen Instituts der Universität Bonn',
+    furtherInformation: 'weiterführende Informationen',
+    contactPerson: 'Ansprechpartner',
+
   },
   en: {
     pageTitle: 'Settings',
     pageLang: 'Language',
     pageDe: 'German',
     pageEng: 'English',
+    subtitle: ' Department of Geography, Bonn University',
+    studentProject: 'Student project',
+    GeoApp: 'This is a student project within the Geo-App-course of the Geographical Institute of the University Bonn',
+    furtherInformation: 'further information',
+    contactPerson: 'contact person',
   },
 
   };

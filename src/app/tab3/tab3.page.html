@@ -30,29 +30,19 @@
 
   </ion-list>
 
-
-
-
-
-
-
-
-
-
   <ion-card>
     <ion-card-header>
-
       <img src="https://www.geographie.uni-bonn.de/giub-slider">
-      <ion-card-subtitle> <ion-icon name="globe"></ion-icon> Geographisches Institut der Universität Bonn</ion-card-subtitle>
-      <ion-card-title>Studentisches Projekt</ion-card-title>
+      <ion-card-subtitle> <ion-icon name="globe"></ion-icon> {{ i18n('subtitle')}}</ion-card-subtitle>
+      <ion-card-title>{{ i18n('studentProject')}}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <p>Dies ist ein Projekt vom Geo-App Kurs des Geographischen Instituts der Universität Bonn.</p>
+      <p>{{ i18n('GeoApp')}}.</p>
 
       <br/>
 
-      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> Weiterführende Informationen</ion-card-subtitle>
+      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> {{ i18n('furtherInformation')}}</ion-card-subtitle>
       <ion-list>
         <ion-item>
           <ion-label><a href="https://www.geographie.uni-bonn.de/" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> Website GIUB</a></ion-label>
@@ -62,7 +52,7 @@
         </ion-item>
       </ion-list>
 
-      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> Ansprechpartner</ion-card-subtitle>
+      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> {{ i18n('contactPerson')}}</ion-card-subtitle>
 
       <ion-list>
         <ion-item>
@@ -86,9 +76,6 @@
           <ion-label><a href="https://yagajs.org" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> YAGAjs</a></ion-label>
         </ion-item>
       </ion-list>
-
-
-
     </ion-card-content>
   </ion-card>
 </ion-content>
