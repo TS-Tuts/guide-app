@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>
+        <ion-title style="text-align: center">
             {{ i18n('pageTitle')}}
         </ion-title>
 
@@ -14,7 +14,7 @@
         <img src="http://namenlos-bonn.de/wp-content/uploads/sites/31/2019/03/Die-Pinte-in-der-Bonner-Altstadt-300x178.jpg"
              alt=""/>
         <ion-card-header>
-            <ion-card-subtitle>Get Started</ion-card-subtitle>
+            <ion-card-subtitle></ion-card-subtitle>
 
             <ion-card-title *ngIf="getHours() < 11 && getHours() > 2">
                 {{ i18n('pageMorning')}}
@@ -35,31 +35,69 @@
             </p>
         </ion-card-content>
     </ion-card>
-
+    <ion-item-divider></ion-item-divider>
+    <header style="text-align: center"><i>{{ i18n('pageStart')}}</i></header>
 
     <ion-list>
         <ion-item>
-            <ion-label>Area</ion-label>
+            <ion-label>
+                <ion-icon name="planet"></ion-icon>
+                {{ i18n('pageArea')}}</ion-label>
             <ion-select interface="popover">
-                <ion-select-option value="old">Altstadt</ion-select-option>
-                <ion-select-option value="city">Innenstadt</ion-select-option>
-                <ion-select-option value="south">Südstadt</ion-select-option>
-                <ion-select-option value="popp">Poppelsdorf</ion-select-option>
-                <ion-select-option value="west">Weststadt</ion-select-option>
+                <ion-select-option value="old">{{ i18n('pageAltstadt')}}</ion-select-option>
+                <ion-select-option value="city">{{ i18n('pageInnenstadt')}}</ion-select-option>
+                <ion-select-option value="south">{{ i18n('pageSüdstadt')}}</ion-select-option>
+                <ion-select-option value="popp">{{ i18n('pagePoppelsdorf')}}</ion-select-option>
+                <ion-select-option value="west">{{ i18n('pageWeststadt')}}</ion-select-option>
             </ion-select>
         </ion-item>
     </ion-list>
 
     <ion-list>
         <ion-item>
-            <ion-label>Route</ion-label>
+            <ion-label>
+                <ion-icon name="git-commit"></ion-icon>
+                {{ i18n('pageRoute')}}</ion-label>
             <ion-select interface="popover">
-                <ion-select-option value="small">klein</ion-select-option>
-                <ion-select-option value="medium">mittel</ion-select-option>
-                <ion-select-option value="big">groß</ion-select-option>
+                <ion-select-option value="small">{{ i18n('pagekurz')}}</ion-select-option>
+                <ion-select-option value="medium">{{ i18n('pagemittel')}}</ion-select-option>
+                <ion-select-option value="big">{{ i18n('pagelang')}}</ion-select-option>
             </ion-select>
         </ion-item>
     </ion-list>
+    <ion-item-divider></ion-item-divider>
+    <ion-list>
+        <ion-item>
+            <ion-label>
+                <ion-icon name="timer"></ion-icon>
+                {{ i18n('pageTime')}}</ion-label>
+            <ion-select interface="popover">
+                <ion-select-option value="monday">{{ i18n('pagemo')}}</ion-select-option>
+                <ion-select-option value="tuesday">{{ i18n('pagetu')}}</ion-select-option>
+                <ion-select-option value="wednesday">{{ i18n('pagewe')}}</ion-select-option>
+                <ion-select-option value="thursday">{{ i18n('pageth')}}</ion-select-option>
+                <ion-select-option value="friday">{{ i18n('pagefr')}}</ion-select-option>
+                <ion-select-option value="saturday">{{ i18n('pagesa')}}</ion-select-option>
+                <ion-select-option value="sunday">{{ i18n('pagesu')}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-item>
+        <ion-label>
+            <ion-icon name="calendar"></ion-icon>
+            {{ i18n('pagehour')}}</ion-label>
+        <ion-datetime *ngIf="configurationService.language === 'de'" display-format="HH" picker-format="HH"
+                      value="1990-02-19T07:43Z">Uhr
+        </ion-datetime>
+        <ion-datetime *ngIf="configurationService.language === 'en'" display-format="hh A" picker-format="hh A"
+                      value="1990-02-19T07:43Z"></ion-datetime>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <section>
+        <ion-button expand="block">{{ i18n('pageSearch')}}</ion-button>
+    </section>
 
 
     <!--<div display="inline-block">
@@ -103,4 +141,7 @@
         </ion-item>
 
     </ion-list>-->
+
+    <!--<ion-alert-controller></ion-alert-controller>-->
+
 </ion-content>
