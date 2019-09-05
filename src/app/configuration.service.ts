@@ -9,4 +9,5 @@ export class ConfigurationService {
 
   public language = 'en';
   public languageAlreadySet = false;
+  public gpsState = false;
 }

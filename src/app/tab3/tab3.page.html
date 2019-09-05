@@ -17,6 +17,10 @@
         <ion-select-option value="en">{{ i18n('pageEng')}}</ion-select-option>
       </ion-select>
     </ion-item>
+    <ion-item>
+      <ion-label>GPS</ion-label>
+      <ion-checkbox [(ngModel)]="configurationService.gpsState"></ion-checkbox>
+    </ion-item>
   </ion-list>
 
 

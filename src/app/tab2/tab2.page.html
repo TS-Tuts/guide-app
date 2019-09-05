@@ -8,6 +8,10 @@
 
 <ion-content>
   <yaga-map style="height: 100%" [lat]="50.726151" [lng]="7.08971" [zoom]="13">
+    <yaga-gps [display]="configurationService.gpsState" [active]="configurationService.gpsState">
+      <yaga-circle-marker [radius]="5" color="#000"></yaga-circle-marker>
+      <yaga-circle></yaga-circle>
+    </yaga-gps>
     <yaga-tile-layer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></yaga-tile-layer>
     <yaga-layers-control>
       <yaga-feature-group yaga-overlay-layer [caption]="((getFeatureCollection('Pubs-Bonn.geojson') | async)||{'name':''}).name">

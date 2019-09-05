@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 
 import { YagaModule } from '@yaga/leaflet-ng2';
+import { YagaGpsModule } from '@yaga/leaflet-ng2-gps';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     YagaModule,
+    YagaGpsModule,
     HttpClientModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],
