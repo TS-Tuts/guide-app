@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>
+        <ion-title style="text-align: center">
             {{ i18n('pageTitle')}}
         </ion-title>
 
@@ -35,6 +35,8 @@
             </p>
         </ion-card-content>
     </ion-card>
+    <ion-item-divider></ion-item-divider>
+    <header style="text-align: center"><i>{{ i18n('pageStart')}}</i></header>
 
     <ion-list>
         <ion-item>
@@ -63,6 +65,39 @@
             </ion-select>
         </ion-item>
     </ion-list>
+    <ion-item-divider></ion-item-divider>
+    <ion-list>
+        <ion-item>
+            <ion-label>
+                <ion-icon name="timer"></ion-icon>
+                {{ i18n('pageTime')}}</ion-label>
+            <ion-select interface="popover">
+                <ion-select-option value="monday">{{ i18n('pagemo')}}</ion-select-option>
+                <ion-select-option value="tuesday">{{ i18n('pagetu')}}</ion-select-option>
+                <ion-select-option value="wednesday">{{ i18n('pagewe')}}</ion-select-option>
+                <ion-select-option value="thursday">{{ i18n('pageth')}}</ion-select-option>
+                <ion-select-option value="friday">{{ i18n('pagefr')}}</ion-select-option>
+                <ion-select-option value="saturday">{{ i18n('pagesa')}}</ion-select-option>
+                <ion-select-option value="sunday">{{ i18n('pagesu')}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-item>
+        <ion-label>
+            <ion-icon name="calendar"></ion-icon>
+            {{ i18n('pagehour')}}</ion-label>
+        <ion-datetime *ngIf="configurationService.language === 'de'" display-format="HH" picker-format="HH"
+                      value="1990-02-19T07:43Z">Uhr
+        </ion-datetime>
+        <ion-datetime *ngIf="configurationService.language === 'en'" display-format="hh A" picker-format="hh A"
+                      value="1990-02-19T07:43Z"></ion-datetime>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <section>
+        <ion-button expand="block">{{ i18n('pageSearch')}}</ion-button>
+    </section>
 
 
     <!--<div display="inline-block">

@@ -14,8 +14,16 @@ import {ConfigurationService} from '../configuration.service';
 })
 export class Tab2Page {
     public dict: Record<string, Record<string, string>> = {
-        de: {},
-        en: {},
+        de: {
+          pageTitle: 'Karte',
+
+
+        },
+        en: {
+          pageTitle: 'Map',
+
+
+        },
     };
 
 
