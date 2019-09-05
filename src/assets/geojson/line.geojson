@@ -6,8 +6,6 @@
     { "type": "Feature", "properties": {
       "category":"test",
       "name": "Testroute",
-      "en_title":  "english title",
-      "de_title": "deutscher Titel",
       "en_description": "description english" ,
       "de_description": "dt. Beschreibung der Route"}, "geometry": { "type": "LineString", "coordinates": [ [ 6.962120903799498, 50.935764432086863 ], [ 7.092323200523817, 50.732927977815308 ] ] } }
   ]
