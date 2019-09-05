@@ -1,12 +1,16 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      {{ i18n('pageTitle')}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <select [(ngModel)]="lang">
+    <option value="de">Deutsch</option>
+    <option value="en">English</option>
+  </select>
     <ion-card class="welcome-card">
       <img src="/assets/shapes.svg" alt="" />
       <ion-card-header>
