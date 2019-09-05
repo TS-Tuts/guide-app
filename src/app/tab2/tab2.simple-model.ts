@@ -21,6 +21,4 @@ export const dataModel = {
         lng: 7.113106995821,
     },
 
-    language: 'en'
-
 };

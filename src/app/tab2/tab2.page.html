@@ -7,27 +7,33 @@
 </ion-header>
 
 <ion-content>
-  <input [(ngModel)]="data.language">
   <yaga-map style="height: 90%" [lat]="51" [lng]="7" [zoom]="10">
     <yaga-tile-layer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></yaga-tile-layer>
 
     <yaga-layers-control>
-    <yaga-polyline *ngFor="let feature of ((getFeatureCollection('line.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" yaga-overlay-layer [caption]="feature.properties.name">
-      <yaga-popup [opened]="false">
-        <h4>{{ feature.properties.name }}</h4><br/>
-        <p>{{ feature.properties[data.language + '_description'] }}</p>
 
-
-      </yaga-popup>
-    </yaga-polyline>
-
-      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('route1.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" yaga-overlay-layer [caption]="feature.properties.name">
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('route1.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" dashArray="14,5" [opacity]="0.7"
+                     yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
         <yaga-popup [opened]="false">
-          {{ feature.properties.name }}
-          <p>{{ feature.properties.description }}</p>
-
+          <div class="limit-width">
+          <h4 style="text-align: center">{{ feature.properties[configurationService.language + '_title'] }}</h4><br/>
+            <img src="https://www.pandotrip.com/wp-content/uploads/2014/10/Cherry-Blossom-Avenue-Bonn-4.jpg">
+          <p>{{ feature.properties[configurationService.language + '_description'] }}</p>
+          </div>
         </yaga-popup>
       </yaga-polyline>
+
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('tracks_Rhine.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" dashArray="14,5" [opacity]="0.7"
+                     yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
+        <yaga-popup [opened]="false">
+          <div class="limit-width">
+          <h4 style="text-align: center">{{ feature.properties[configurationService.language + '_title'] }}</h4><br/>
+            <img src="https://media2.trover.com/T/59120b49092f571b1100b7e8/fixedw_large_4x.jpg">
+          <p>{{ feature.properties[configurationService.language + '_description'] }}</p>
+        </div>
+        </yaga-popup>
+      </yaga-polyline>
+
     </yaga-layers-control>
   </yaga-map>
 </ion-content>

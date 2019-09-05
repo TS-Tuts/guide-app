@@ -22,6 +22,7 @@ export class Tab2Page {
   @ViewChild(MapComponent, {static: true}) private mapComponent: MapComponent;
   private geoJSONMap: Map<string, Promise<FeatureCollection<LineString | Polygon | Point>>> = new Map();
   public data = dataModel;
+
   constructor(
       public configurationService: ConfigurationService,
       private http: HttpClient,
