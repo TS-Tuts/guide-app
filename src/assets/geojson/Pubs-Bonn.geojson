@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "Pubs-Bonn",
+"name": "Pubs",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "addr:city": "Bonn", "addr:housenumber": "11", "addr:postcode": "53111", "addr:street": "Wolfstraße", "name": "Tresor", "opening_hours": "Mo-Sa 19:00+", "website": "https:\/\/www.tresor-bonn.de\/", "contact:phone": "", "picture": "https:\/\/i0.wp.com\/www.welovepubs.de\/wp-content\/uploads\/2018\/10\/Tresor_Bonn_Kneipe-3.jpg?resize=283%2C425&ssl=1" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 7.0950485, 50.7392927 ] ] } },
