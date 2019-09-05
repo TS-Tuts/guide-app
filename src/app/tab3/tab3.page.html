@@ -17,26 +17,56 @@
         <ion-select-option value="en">{{ i18n('pageEng')}}</ion-select-option>
       </ion-select>
     </ion-item>
-
-    <ion-item>
-      <ion-label>{{ i18n('pageBC')}}</ion-label>
-      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select>
-    </ion-item>
-
   </ion-list>
 
 
+    <h2>{{i18n('about')}}</h2>
+  <ion-card>
+    <ion-card-header>
+      <img src="https://www.geographie.uni-bonn.de/giub-slider">
+      <ion-card-subtitle> <ion-icon name="globe"></ion-icon> {{ i18n('subtitle')}}</ion-card-subtitle>
+      <ion-card-title>{{ i18n('studentProject')}}</ion-card-title>
+    </ion-card-header>
 
+    <ion-card-content>
+      <p>{{ i18n('GeoApp')}}.</p>
 
+      <br/>
 
+      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> {{ i18n('furtherInformation')}}</ion-card-subtitle>
+      <ion-list>
+        <ion-item>
+          <ion-label><a href="https://www.geographie.uni-bonn.de/" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> Website GIUB</a></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label><a href="https://fsgeo-bonn.de/" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> Website Fachschaft</a></ion-label>
+        </ion-item>
+      </ion-list>
 
+      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> {{ i18n('contactPerson')}}</ion-card-subtitle>
 
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://www.geographie.uni-bonn.de/das-institut/personal/technisches-administratives-personal/HerritschStephan_Foto.jpg/image_mini">
+          </ion-avatar>
+          <ion-label><a href="https://www.geographie.uni-bonn.de/das-institut/personal/technisches-administratives-personal/herritsch-stephan" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> S. Herritsch Uni Bonn</a></ion-label>
+          </ion-item>
 
+          <ion-item>
+              <ion-avatar slot="start">
+                  <img src="https://pretalx.com/media/atd-profile.jpg">
+              </ion-avatar>
+              <ion-label><a href="https://atd.yagajs.org/" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> A. Schubert Software-Architect </a></ion-label>
+          </ion-item>
 
-
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://yagajs.org/pics/favicon.png">
+          </ion-avatar>
+          <ion-label><a href="https://yagajs.org" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> YAGAjs</a></ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
