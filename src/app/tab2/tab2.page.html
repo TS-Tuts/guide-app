@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Two
+    <ion-title style="text-align: center">
+      {{ i18n('pageTitle')}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -50,6 +50,39 @@
           </yaga-popup>
         </yaga-marker>
       </yaga-feature-group>
+
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('route1.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" dashArray="14,5" [opacity]="0.7"
+                     yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
+        <yaga-popup [opened]="false">
+          <div class="limit-width">
+          <h4 style="text-align: center">{{ feature.properties[configurationService.language + '_title'] }}</h4><br/>
+            <img src="https://www.pandotrip.com/wp-content/uploads/2014/10/Cherry-Blossom-Avenue-Bonn-4.jpg">
+          <p>{{ feature.properties[configurationService.language + '_description'] }}</p>
+          </div>
+        </yaga-popup>
+      </yaga-polyline>
+
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('tracks_Rhine.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" dashArray="14,5" [opacity]="0.7"
+                     yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
+        <yaga-popup [opened]="false">
+          <div class="limit-width">
+          <h4 style="text-align: center">{{ feature.properties[configurationService.language + '_title'] }}</h4><br/>
+            <img src="https://media2.trover.com/T/59120b49092f571b1100b7e8/fixedw_large_4x.jpg">
+          <p>{{ feature.properties[configurationService.language + '_description'] }}</p>
+        </div>
+        </yaga-popup>
+      </yaga-polyline>
+
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('tracks3.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#d40d2b" dashArray="14,5" [opacity]="0.7"
+                     yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
+        <yaga-popup [opened]="false">
+          <div class="limit-width">
+            <h4 style="text-align: center">{{ feature.properties[configurationService.language + '_title'] }}</h4><br/>
+            <img src="https://www.bonn.de/bonn-erleben/aktiv-und-unterwegs/alter-zoll.php.media/64750/Biergarten_Alter_Zoll.jpg.scaled/5360131c1f4332c750ca77ebf136a279.jpg">
+            <p>{{ feature.properties[configurationService.language + '_description'] }}</p>
+          </div>
+        </yaga-popup>
+      </yaga-polyline>
 
     </yaga-layers-control>
   </yaga-map>

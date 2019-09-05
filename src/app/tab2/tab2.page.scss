@@ -1,1 +1,10 @@
-
+@media screen and (min-width: 200px) {
+  .limit-width{
+    width: 200px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .limit-width{
+    width: 300px;
+  }
+}
