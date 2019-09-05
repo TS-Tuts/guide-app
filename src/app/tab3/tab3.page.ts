@@ -10,6 +10,7 @@ import {ConfigurationService} from '../configuration.service';
 export class Tab3Page {
     public dict: Record<string, Record<string, string>> = {
   de: {
+    about: 'Über dieses Projekt',
     pageTitle: 'Einstellungen',
     pageLang: 'Sprache',
     pageDe: 'Deutsch',
@@ -22,6 +23,7 @@ export class Tab3Page {
 
   },
   en: {
+    about: 'About this project',
     pageTitle: 'Settings',
     pageLang: 'Language',
     pageDe: 'German',
