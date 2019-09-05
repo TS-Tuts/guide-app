@@ -8,4 +8,5 @@ export class ConfigurationService {
   constructor() { }
 
   public language = 'en';
+  public languageAlreadySet = false;
 }
