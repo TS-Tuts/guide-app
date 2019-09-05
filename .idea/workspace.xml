@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e3cd4b3-aa9e-4f0c-a68c-27297e5f63d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ionic-serve.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,6 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QMp0auELSBhvDOooJsBOfrsJbq" />
@@ -114,6 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567590096459</updated>
       <workItem from="1567590097642" duration="1128000" />
+      <workItem from="1567670967232" duration="1290000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup to start programming">
       <created>1567590724116</created>
@@ -133,7 +139,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
