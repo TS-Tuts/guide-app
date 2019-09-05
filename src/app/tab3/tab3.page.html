@@ -1,14 +1,62 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Über die App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <select [(ngModel)]="lang">
-    <option value="de">Deutsch</option>
-    <option value="en">English</option>
-  </select>
+  <ion-card>
+    <ion-card-header>
+
+      <img src="https://www.geographie.uni-bonn.de/giub-slider">
+      <ion-card-subtitle> <ion-icon name="globe"></ion-icon> Geographisches Institut der Universität Bonn</ion-card-subtitle>
+      <ion-card-title>Studentisches Projekt</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Dies ist ein Projekt vom Geo-App Kurs des Geographischen Instituts der Universität Bonn.</p>
+
+      <br/>
+
+      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> Weiterführende Informationen</ion-card-subtitle>
+      <ion-list>
+        <ion-item>
+          <ion-label><a href="https://www.geographie.uni-bonn.de/" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> Website GIUB</a></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label><a href="https://fsgeo-bonn.de/" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> Website Fachschaft</a></ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-card-subtitle><ion-icon name="information-circle-outline"></ion-icon> Ansprechpartner</ion-card-subtitle>
+
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://www.geographie.uni-bonn.de/das-institut/personal/technisches-administratives-personal/HerritschStephan_Foto.jpg/image_mini">
+          </ion-avatar>
+          <ion-label><a href="https://www.geographie.uni-bonn.de/das-institut/personal/technisches-administratives-personal/herritsch-stephan" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> S. Herritsch Uni Bonn</a></ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-avatar slot="start">
+                  <img src="https://pretalx.com/media/atd-profile.jpg">
+              </ion-avatar>
+              <ion-label><a href="https://atd.yagajs.org/" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> A. Schubert Software-Architect </a></ion-label>
+          </ion-item>
+
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://yagajs.org/pics/favicon.png">
+          </ion-avatar>
+          <ion-label><a href="https://yagajs.org" target="_blank" rel="noopener"><ion-icon name="link"></ion-icon> YAGAjs</a></ion-label>
+        </ion-item>
+      </ion-list>
+
+
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
