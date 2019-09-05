@@ -14,7 +14,7 @@
         <img src="http://namenlos-bonn.de/wp-content/uploads/sites/31/2019/03/Die-Pinte-in-der-Bonner-Altstadt-300x178.jpg"
              alt=""/>
         <ion-card-header>
-            <ion-card-subtitle>Get Started</ion-card-subtitle>
+            <ion-card-subtitle></ion-card-subtitle>
 
             <ion-card-title *ngIf="getHours() < 11 && getHours() > 2">
                 {{ i18n('pageMorning')}}
@@ -36,27 +36,30 @@
         </ion-card-content>
     </ion-card>
 
-
     <ion-list>
         <ion-item>
-            <ion-label>Area</ion-label>
+            <ion-label>
+                <ion-icon name="planet"></ion-icon>
+                {{ i18n('pageArea')}}</ion-label>
             <ion-select interface="popover">
-                <ion-select-option value="old">Altstadt</ion-select-option>
-                <ion-select-option value="city">Innenstadt</ion-select-option>
-                <ion-select-option value="south">Südstadt</ion-select-option>
-                <ion-select-option value="popp">Poppelsdorf</ion-select-option>
-                <ion-select-option value="west">Weststadt</ion-select-option>
+                <ion-select-option value="old">{{ i18n('pageAltstadt')}}</ion-select-option>
+                <ion-select-option value="city">{{ i18n('pageInnenstadt')}}</ion-select-option>
+                <ion-select-option value="south">{{ i18n('pageSüdstadt')}}</ion-select-option>
+                <ion-select-option value="popp">{{ i18n('pagePoppelsdorf')}}</ion-select-option>
+                <ion-select-option value="west">{{ i18n('pageWeststadt')}}</ion-select-option>
             </ion-select>
         </ion-item>
     </ion-list>
 
     <ion-list>
         <ion-item>
-            <ion-label>Route</ion-label>
+            <ion-label>
+                <ion-icon name="git-commit"></ion-icon>
+                {{ i18n('pageRoute')}}</ion-label>
             <ion-select interface="popover">
-                <ion-select-option value="small">klein</ion-select-option>
-                <ion-select-option value="medium">mittel</ion-select-option>
-                <ion-select-option value="big">groß</ion-select-option>
+                <ion-select-option value="small">{{ i18n('pagekurz')}}</ion-select-option>
+                <ion-select-option value="medium">{{ i18n('pagemittel')}}</ion-select-option>
+                <ion-select-option value="big">{{ i18n('pagelang')}}</ion-select-option>
             </ion-select>
         </ion-item>
     </ion-list>
@@ -103,4 +106,7 @@
         </ion-item>
 
     </ion-list>-->
+
+    <!--<ion-alert-controller></ion-alert-controller>-->
+
 </ion-content>

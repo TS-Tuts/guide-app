@@ -14,12 +14,14 @@ export class Tab3Page {
     pageLang: 'Sprache',
     pageDe: 'Deutsch',
     pageEng: 'Englisch',
+
   },
   en: {
     pageTitle: 'Settings',
     pageLang: 'Language',
     pageDe: 'German',
     pageEng: 'English',
+
   },
 
   };
