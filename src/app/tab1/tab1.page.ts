@@ -15,6 +15,7 @@ export class Tab1Page {
   public dict: Record<string, Record<string, string>> = {
     de: {
       pageTitle: 'Dein Führer',
+      pageTitleImageSource: 'Quelle',
       pageMorning: 'Guten Morgen, ich bin heute dein Führer',
       pageAfternoon: 'Guten Tag, ich bin heute dein Führer',
       pageEvening: 'Guten Abend, ich bin heute dein Führer',
@@ -43,6 +44,7 @@ export class Tab1Page {
     },
     en: {
       pageTitle: 'Your Guide, tonight',
+      pageTitleImageSource: 'Source',
       pageMorning: 'Good morning, I am your guide',
       pageAfternoon: 'Hello, I am your guide',
       pageEvening: 'Hey, I am drunk',
