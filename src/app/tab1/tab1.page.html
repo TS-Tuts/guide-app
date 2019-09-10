@@ -43,12 +43,20 @@
             <ion-label>
                 <ion-icon name="planet"></ion-icon>
                 {{ i18n('pageArea')}}</ion-label>
-            <ion-select interface="popover">
-                <ion-select-option value="old">{{ i18n('pageAltstadt')}}</ion-select-option>
-                <ion-select-option value="city">{{ i18n('pageInnenstadt')}}</ion-select-option>
-                <ion-select-option value="south">{{ i18n('pageSüdstadt')}}</ion-select-option>
-                <ion-select-option value="popp">{{ i18n('pagePoppelsdorf')}}</ion-select-option>
-                <ion-select-option value="west">{{ i18n('pageWeststadt')}}</ion-select-option>
+            <ion-select interface="popover" [(ngModel)]="configurationService.filter.location">
+                <!-- '53111', downtown
+                '53113', südstadt gronau
+                '53115', poppelsdorf
+                '53117', graurheindorf
+                '53121', endenich -->
+                <!-- City and old have the same zip-code: <ion-select-option value="old">{{ i18n('pageAltstadt')}}</ion-select-option>
+                <ion-select-option value="53111">{{ i18n('pageInnenstadt')}}</ion-select-option>-->
+                <ion-select-option value="">{{ i18n('areaAll')}}</ion-select-option>
+                <ion-select-option value="53111">{{ i18n('areaInnenstadt')}}, {{ i18n('areaAltstadt')}}</ion-select-option>
+                <ion-select-option value="53113">{{ i18n('areaSüdstadt')}}</ion-select-option>
+                <ion-select-option value="53115">{{ i18n('areaPoppelsdorf')}}, {{ i18n('areaWeststadt')}}</ion-select-option>
+                <!-- west and poppelsdorf have the same zip-code: <ion-select-option value="53115">{{ i18n('pagePoppelsdorf')}}</ion-select-option>
+                <ion-select-option value="west">{{ i18n('pageWeststadt')}}</ion-select-option>-->
             </ion-select>
         </ion-item>
     </ion-list>
