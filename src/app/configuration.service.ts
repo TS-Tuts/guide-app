@@ -6,8 +6,9 @@ import { Injectable } from '@angular/core';
 export class ConfigurationService {
 
   constructor() { }
+  public language = navigator.language.startsWith('de') ? 'de' : 'en';
 
-  public language = 'en';
-  public languageAlreadySet = false;
+  // only for unknown languages we want to ask for a language switch.
+  public languageAlreadySet = navigator.language.startsWith('de') || navigator.language.startsWith('en');
   public gpsState = false;
 }

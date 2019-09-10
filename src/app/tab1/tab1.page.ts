@@ -87,13 +87,13 @@ export class Tab1Page {
 
   public ionViewWillEnter() {
     const configurationService = this.configurationService;
+
     if (this.configurationService.languageAlreadySet === false) {
       this.alertController.create({
-        header: 'Rather in German?',
-        message: '',
+        header: 'Select your language / Wählen Sie Ihre Sprache',
         buttons: [
-            {text: 'Yes', handler() {configurationService.language = 'de'; configurationService.languageAlreadySet = true; }},
-            {text: 'No', handler() {configurationService.language = 'en'; configurationService.languageAlreadySet = true; }},
+            {text: 'Deutsch', handler() {configurationService.language = 'de'; configurationService.languageAlreadySet = true; }},
+            {text: 'English', handler() {configurationService.language = 'en'; configurationService.languageAlreadySet = true; }},
         ]
       }).then(alert => {
         alert.present();
