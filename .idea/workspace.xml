@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e3cd4b3-aa9e-4f0c-a68c-27297e5f63d6" name="Default Changelist" comment="Automate steps in IDE part2">
-      <change beforePath="$PROJECT_DIR$/.idea/guide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/guide.iml" afterDir="false" />
+    <list default="true" id="7e3cd4b3-aa9e-4f0c-a68c-27297e5f63d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ionic.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/ionic.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -129,6 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567590096459</updated>
       <workItem from="1567590097642" duration="1128000" />
+      <workItem from="1568132582118" duration="430000" />
     </task>
     <task id="LOCAL-00001" summary="Basic setup to start programming">
       <created>1567590724116</created>
@@ -151,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567689884629</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Setup project for building an ios and android artifact&#10;&#10;Mainly we call `ionic cordova plattform add ios` and&#10;`ionic cordova plattform add android` in our console.">
+      <created>1568132824759</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568132824759</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +182,7 @@
     <MESSAGE value="Fix merge conflicts" />
     <MESSAGE value="Add GPS to the app" />
     <MESSAGE value="Add build artifact APK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add build artifact APK" />
+    <MESSAGE value="Setup project for building an ios and android artifact&#10;&#10;Mainly we call `ionic cordova plattform add ios` and&#10;`ionic cordova plattform add android` in our console." />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup project for building an ios and android artifact&#10;&#10;Mainly we call `ionic cordova plattform add ios` and&#10;`ionic cordova plattform add android` in our console." />
   </component>
 </project>
