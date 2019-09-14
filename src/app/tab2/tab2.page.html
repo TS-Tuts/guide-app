@@ -15,44 +15,47 @@
     <yaga-tile-layer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></yaga-tile-layer>
     <yaga-layers-control>
       <yaga-feature-group yaga-overlay-layer [caption]="((getFeatureCollection('Pubs-Bonn.geojson') | async)||{'name':''}).name">
-        <yaga-marker *ngFor="let feature of ((getFeatureCollection('Pubs-Bonn.geojson') | async) || {'features': []}).features"
-                     [lat]="feature.geometry.coordinates[0][1]"
-                     [lng]="feature.geometry.coordinates[0][0]"
+        <ng-container *ngFor="let feature of ((getFeatureCollection('Pubs-Bonn.geojson') | async) || {'features': []}).features">
+          <yaga-marker *ngIf="configurationService.filter.location === '' || feature.properties['addr:postcode'] === configurationService.filter.location"
+                  [lat]="feature.geometry.coordinates[0][1]"
+                  [lng]="feature.geometry.coordinates[0][0]"
 
-        >
-          <yaga-popup>
-            <div style="width: 200px">
-              <h5 style="text-align: center"><b>{{feature.properties.name}}</b></h5>
-              <p style="text-align: center">
-                <img src={{feature.properties.picture}}> </p>
+          >
+            <yaga-popup>
+              <div style="width: 200px">
+                <h5 style="text-align: center"><b>{{feature.properties.name}}</b></h5>
+                <p style="text-align: center">
+                  <img src={{feature.properties.picture}}> </p>
 
 
 
-              <p *ngIf="feature.properties['addr:housenumber'] || feature.properties['addr:city'] || feature.properties['addr:street']">
-                <b>{{ i18n('address')}}: </b><br/>
-                <span *ngIf="feature.properties['addr:street']|| feature.properties['addr:housenumber']">
+                <p *ngIf="feature.properties['addr:housenumber'] || feature.properties['addr:city'] || feature.properties['addr:street']">
+                  <b>{{ i18n('address')}}: </b><br/>
+                  <span *ngIf="feature.properties['addr:street']|| feature.properties['addr:housenumber']">
                   <ion-icon name="home"></ion-icon> {{feature.properties['addr:street']}} {{feature.properties['addr:housenumber']}}
-                  <br/></span>
-                <span *ngIf="feature.properties['addr:postcode'] || feature.properties['addr:city']">
+                    <br/></span>
+                  <span *ngIf="feature.properties['addr:postcode'] || feature.properties['addr:city']">
                   <ion-icon name="home" style="color: white"></ion-icon> {{feature.properties['addr:postcode']}} Bonn
                 <br/></span>
-              </p>
-              <p *ngIf="feature.properties['contact:phone'] || feature.properties['website']">
-                <b>{{ i18n('contact')}}: </b><br/>
-              <span *ngIf="feature.properties['contact:phone']">
+                </p>
+                <p *ngIf="feature.properties['contact:phone'] || feature.properties['website']">
+                  <b>{{ i18n('contact')}}: </b><br/>
+                  <span *ngIf="feature.properties['contact:phone']">
                 <ion-icon name="call"></ion-icon> <a href="tel:{{feature.properties['contact:phone']}}">{{ i18n('phone')}}</a>
               <br/></span>
-              <span *ngIf="feature.properties['website']">
+                  <span *ngIf="feature.properties['website']">
                 <ion-icon name="link"></ion-icon> <a href="{{feature.properties['website']}}" target="_blank">{{ i18n('website')}}</a>
               <br/></span>
-              </p>
-              <p *ngIf="feature.properties['opening_hours']">
-                <b>{{ i18n('openinghours')}}: </b><br/>
-                <ion-icon name="time"></ion-icon> {{feature.properties['opening_hours']}} <br/>
-              </p>
-            </div>
-          </yaga-popup>
-        </yaga-marker>
+                </p>
+                <p *ngIf="feature.properties['opening_hours']">
+                  <b>{{ i18n('openinghours')}}: </b><br/>
+                  <ion-icon name="time"></ion-icon> {{feature.properties['opening_hours']}} <br/>
+                </p>
+              </div>
+            </yaga-popup>
+          </yaga-marker>
+        </ng-container>
+
       </yaga-feature-group>
 
       <yaga-polyline *ngFor="let feature of ((getFeatureCollection('route1.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" dashArray="14,5" [opacity]="0.7"
