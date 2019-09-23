@@ -58,8 +58,8 @@
 
       </yaga-feature-group>
 
-      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('route1.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" dashArray="14,5" [opacity]="0.7"
-                     yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('route1.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" [weight]="10" [opacity]="0.5"
+                      yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
         <yaga-popup [opened]="false">
           <div class="limit-width">
           <h4 style="text-align: center">{{ feature.properties[configurationService.language + '_title'] }}</h4><br/>
@@ -69,7 +69,7 @@
         </yaga-popup>
       </yaga-polyline>
 
-      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('tracks_Rhine.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" dashArray="14,5" [opacity]="0.7"
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('tracks_Rhine.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#1845f5" [weight]="10" [opacity]="0.5"
                      yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
         <yaga-popup [opened]="false">
           <div class="limit-width">
@@ -80,7 +80,7 @@
         </yaga-popup>
       </yaga-polyline>
 
-      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('tracks3.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#d40d2b" dashArray="14,5" [opacity]="0.7"
+      <yaga-polyline *ngFor="let feature of ((getFeatureCollection('tracks3.geojson') | async) || {'features': []}).features" [geoJSON]="feature" color="#d40d2b" [weight]="10" [opacity]="0.5"
                      yaga-overlay-layer [caption]="feature.properties[configurationService.language + '_title']">
         <yaga-popup [opened]="false">
           <div class="limit-width">
